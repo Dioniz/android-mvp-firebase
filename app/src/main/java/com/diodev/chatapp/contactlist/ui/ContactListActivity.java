@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.diodev.chatapp.R;
 import com.diodev.chatapp.addcontact.ui.AddContactFragment;
+import com.diodev.chatapp.chat.ui.ChatActivity;
 import com.diodev.chatapp.contactlist.ContactListPresenter;
 import com.diodev.chatapp.contactlist.ContactListPresenterImpl;
 import com.diodev.chatapp.contactlist.ui.adapters.ContactListAdapter;
@@ -93,8 +94,8 @@ public class ContactListActivity extends AppCompatActivity implements ContactLis
 
     @Override
     protected void onPause() {
-        contactListPresenter.onPause();
         super.onPause();
+        contactListPresenter.onPause();
     }
 
     @Override
@@ -125,7 +126,10 @@ public class ContactListActivity extends AppCompatActivity implements ContactLis
 
     @Override
     public void onItemClick(User user) {
-        Toast.makeText(this, user.getEmail(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ChatActivity.class);
+        intent.putExtra(ChatActivity.EMAIL_KEY, user.getEmail());
+        intent.putExtra(ChatActivity.ONLINE_KEY, user.isOnline());
+        startActivity(intent);
     }
 
     @Override
