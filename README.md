@@ -8,6 +8,5 @@ Chat application using Model View Presenter architectural pattern and Firebase S
 * ButterKnife for view injection
 * Glide for image caching and loading
 
-![alt text](https://raw.githubusercontent.com/Dioniz/android-mvp-firebase/master/images/login.png "Firebase Authentication")
 
-![alt text](https://raw.githubusercontent.com/Dioniz/android-mvp-firebase/master/images/chat.png "Firebase Database")
+<img src="https://raw.githubusercontent.com/Dioniz/android-mvp-firebase/master/images/login.png" width="300">                           <img src="https://raw.githubusercontent.com/Dioniz/android-mvp-firebase/master/images/chat.png" width="300">
